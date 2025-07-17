@@ -80,9 +80,9 @@ apt-get -y update -oAcquire::AllowInsecureRepositories=true
 apt-get -y --allow-unauthenticated  install deb-multimedia-keyring
 
 # KXStudio
-wget https://launchpad.net/~kxstudio-debian/+archive/kxstudio/+files/kxstudio-repos_11.1.0_all.deb
-sudo dpkg -i kxstudio-repos_11.1.0_all.deb
-rm -f kxstudio-repos_11.1.0_all.deb
+wget https://launchpad.net/~kxstudio-debian/+archive/kxstudio/+files/kxstudio-repos_11.2.0_all.deb
+sudo dpkg -i kxstudio-repos_11.2.0_all.deb
+rm -f kxstudio-repos_11.2.0_all.deb
 
 # Zynthian
 wget -O - https://deb.zynthian.org/deb-zynthian-org.gpg > /etc/apt/trusted.gpg.d/deb-zynthian-org.gpg
