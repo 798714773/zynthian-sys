@@ -27,9 +27,9 @@
 #------------------------------------------------------------------------------
 
 # With the SDcard mounted in your computer
-cd /media/txino/bootfs
-echo -n "zyn:" > userconf.txt
-echo 'opensynth' | openssl passwd -6 -stdin >> userconf.txt
+# cd /media/txino/bootfs
+# echo -n "zyn:" > userconf.txt
+# echo 'opensynth' | openssl passwd -6 -stdin >> userconf.txt
 touch ssh
 
 #------------------------------------------------------------------------------
@@ -80,9 +80,13 @@ fi
 #------------------------------------------------
 
 # deb-multimedia repo
-echo "deb https://www.deb-multimedia.org bookworm main non-free" >> /etc/apt/sources.list
+echo "deb https://mirrors.tuna.tsinghua.edu.cn/debian-multimedia/ bookworm main non-free" >> /etc/apt/sources.list
+
+wget https://mirrors.tuna.tsinghua.edu.cn/debian-multimedia/pool/main/d/deb-multimedia-keyring/deb-multimedia-keyring_2016.8.1_all.deb
+sudo dpkg -i deb-multimedia-keyring_2016.8.1_all.deb
+
 apt-get -y update -oAcquire::AllowInsecureRepositories=true
-apt-get -y --allow-unauthenticated  install deb-multimedia-keyring
+
 
 # KXStudio
 wget https://launchpad.net/~kxstudio-debian/+archive/kxstudio/+files/kxstudio-repos_11.1.0_all.deb

@@ -31,19 +31,16 @@
 
 cd
 
-if [ "$1" = "wiggle" ] || [ ! -f ~/.wiggled ]; then
-	echo `date` >  ~/.wiggled
-	raspi-config --expand-rootfs
-	reboot
-else
-	if [ ! -d "zynthian-sys" ]; then
-		apt-get update
-		apt-get -y install apt-utils git parted screen
-		git clone -b oram https://github.com/798714773/zynthian-sys.git
-	fi
-	cd zynthian-sys/scripts
-	./setup_system_raspioslite_64bit_bookworm.sh
-	cd
-	rm -rf zynthian-sys
+echo `date` >  ~/.wiggled
+
+if [ ! -d "zynthian-sys" ]; then
+	apt-get update
+	apt-get -y install apt-utils git parted screen
+	git clone -b oram https://github.com/798714773/zynthian-sys.git
 fi
+cd zynthian-sys/scripts
+./setup_system_raspioslite_64bit_bookworm.sh
+cd
+rm -rf zynthian-sys
+
 
