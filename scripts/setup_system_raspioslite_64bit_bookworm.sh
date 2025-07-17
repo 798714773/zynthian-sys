@@ -67,7 +67,7 @@ apt-get -y update --allow-releaseinfo-change
 apt-get -y full-upgrade
 
 # Install required dependencies if needed
-apt-get -y install apt-utils apt-transport-https rpi-update sudo software-properties-common parted dirmngr rpi-eeprom gpgv wget
+apt-get -y install apt-transport-https rpi-update sudo software-properties-common dirmngr rpi-eeprom gpgv wget
 
 
 #------------------------------------------------
