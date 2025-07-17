@@ -42,7 +42,6 @@ source "zynthian_envars_extended.sh"
 # Set default config
 #------------------------------------------------
 
-[ -n "$ZYNTHIAN_INCLUDE_RPI_UPDATE" ] || ZYNTHIAN_INCLUDE_RPI_UPDATE=no
 [ -n "$ZYNTHIAN_INCLUDE_PIP" ] || ZYNTHIAN_INCLUDE_PIP=yes
 [ -n "$ZYNTHIAN_CHANGE_HOSTNAME" ] || ZYNTHIAN_CHANGE_HOSTNAME=yes
 
@@ -70,10 +69,6 @@ apt-get -y full-upgrade
 # Install required dependencies if needed
 apt-get -y install apt-utils apt-transport-https rpi-update sudo software-properties-common parted dirmngr rpi-eeprom gpgv wget
 
-# Update Firmware
-if [ "$ZYNTHIAN_INCLUDE_RPI_UPDATE" == "yes" ]; then
-    rpi-update
-fi
 
 #------------------------------------------------
 # Add Repositories
