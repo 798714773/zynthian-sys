@@ -35,7 +35,7 @@ echo `date` >  ~/.wiggled
 
 if [ ! -d "zynthian-sys" ]; then
 	apt-get update
-	apt-get -y install git screen
+	apt-get -y install screen
 	git clone -b oram https://github.com/798714773/zynthian-sys.git
 fi
 cd zynthian-sys/scripts

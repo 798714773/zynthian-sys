@@ -145,7 +145,7 @@ libclthreads-dev libclxclient-dev libsndfile-zyndev
 # Removed from bookworm: libavresample4
 
 # Tools
-apt-get -y --no-install-recommends install build-essential git swig pkg-config autoconf automake premake \
+apt-get -y --no-install-recommends install build-essential swig pkg-config autoconf automake premake \
 subversion gettext intltool libtool libtool-bin cmake cmake-curses-gui flex bison ngrep qt5-qmake gobjc++ \
 ruby rake xsltproc vorbis-tools zenity doxygen graphviz glslang-tools rubberband-cli docutils-common faust
 
