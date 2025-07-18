@@ -181,6 +181,9 @@ git clone -b "${ZYNTHIAN_SYS_BRANCH}" "${ZYNTHIAN_SYS_REPO}"
 # QUESTION: is this needed at all?
 #git config --global pull.rebase false
 
+# Install MCP4748 library (Analog Output / CV-OUT)
+$ZYNTHIAN_RECIPE_DIR/install_MCP4728.sh
+
 # Zyncoder library
 cd "$ZYNTHIAN_DIR"
 git clone -b "${ZYNTHIAN_ZYNCODER_BRANCH}" "${ZYNTHIAN_ZYNCODER_REPO}"
@@ -415,8 +418,7 @@ $ZYNTHIAN_RECIPE_DIR/install_njconnect.sh
 # Install VL53L0X library (Distance Sensor)
 $ZYNTHIAN_RECIPE_DIR/install_VL53L0X.sh
 
-# Install MCP4748 library (Analog Output / CV-OUT)
-$ZYNTHIAN_RECIPE_DIR/install_MCP4728.sh
+
 
 # Install noVNC web viewer
 $ZYNTHIAN_RECIPE_DIR/install_noVNC.sh
