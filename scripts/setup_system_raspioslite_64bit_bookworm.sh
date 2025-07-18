@@ -345,7 +345,7 @@ systemctl enable zynthian-webconf
 systemctl enable zynthian-config-on-boot
 
 # On first boot, resize SD partition, regenerate keys, etc.
-$ZYNTHIAN_SYS_DIR/scripts/set_first_boot.sh
+
 
 #------------------------------------------------
 # Build & Install Required Libraries
@@ -585,4 +585,6 @@ fi
 
 #------------------------------------------------
 
+# 原来在347行
+$ZYNTHIAN_SYS_DIR/scripts/set_first_boot.sh
 
