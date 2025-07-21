@@ -28,6 +28,10 @@
 # For a full copy of the GNU General Public License see the LICENSE.txt file.
 # 
 #******************************************************************************
+cd /boot
+echo -n "zyn:" > userconf.txt
+echo 'opensynth' | openssl passwd -6 -stdin >> userconf.txt
+touch ssh
 
 cd
 

@@ -28,12 +28,6 @@
 
 # With the SDcard mounted in your computer
 # cd /media/txino/bootfs
-cd /boot
-echo -n "zyn:" > userconf.txt
-echo 'opensynth' | openssl passwd -6 -stdin >> userconf.txt
-touch ssh
-
-cd
 
 #------------------------------------------------------------------------------
 # Load Environment Variables
