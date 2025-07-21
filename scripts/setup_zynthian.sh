@@ -31,11 +31,31 @@
 
 cd
 
+# 注释掉前三行
+sed -i -e '1 s/^deb/#deb/' -e '2 s/^deb/#deb/' -e '3 s/^deb/#deb/' /etc/apt/sources.list
+
+# 修改成清华源
+echo "deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm main contrib non-free non-free-firmware" >> /etc/apt/sources.list
+echo "deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-updates main contrib non-free non-free-firmware" >> /etc/apt/sources.list
+echo "deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-backports main contrib non-free non-free-firmware" >> /etc/apt/sources.list
+echo "deb https://mirrors.tuna.tsinghua.edu.cn/debian-security bookworm-security main contrib non-free non-free-firmware" >> /etc/apt/sources.list
+
+echo "deb https://mirrors.tuna.tsinghua.edu.cn/raspberrypi/ bookworm main" >> /etc/apt/sources.list.d/raspi.list
+
+# pip3换源
+mkdir -p ~/.pip
+cat > ~/.pip/pip.conf << EOF
+[global]
+index-url = https://pypi.tuna.tsinghua.edu.cn/simple
+trusted-host = pypi.tuna.tsinghua.edu.cn
+timeout = 600
+EOF
+
 echo `date` >  ~/.wiggled
 
 if [ ! -d "zynthian-sys" ]; then
 	apt-get update
-	apt-get -y install git screen cmake
+	apt-get -y install git screen cmake python3-alsaaudio
 	git clone -b oram https://github.com/798714773/zynthian-sys.git
 fi
 cd zynthian-sys/scripts

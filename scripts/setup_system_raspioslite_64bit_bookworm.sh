@@ -28,9 +28,12 @@
 
 # With the SDcard mounted in your computer
 # cd /media/txino/bootfs
-# echo -n "zyn:" > userconf.txt
-# echo 'opensynth' | openssl passwd -6 -stdin >> userconf.txt
+cd /boot
+echo -n "zyn:" > userconf.txt
+echo 'opensynth' | openssl passwd -6 -stdin >> userconf.txt
 touch ssh
+
+cd
 
 #------------------------------------------------------------------------------
 # Load Environment Variables
@@ -76,8 +79,8 @@ apt-get -y install apt-transport-https rpi-update sudo software-properties-commo
 
 # deb-multimedia repo
 # echo "deb https://www.deb-multimedia.org bookworm main non-free" >> /etc/apt/sources.list
-# echo "deb https://mirrors.tuna.tsinghua.edu.cn/debian-multimedia/ bookworm main non-free" >> /etc/apt/sources.list
-# wget https://mirrors.tuna.tsinghua.edu.cn/debian-multimedia/pool/main/d/deb-multimedia-keyring/deb-multimedia-keyring_2024.9.1_all.deb
+echo "deb https://mirrors.tuna.tsinghua.edu.cn/debian-multimedia/ bookworm main non-free" >> /etc/apt/sources.list
+wget https://mirrors.tuna.tsinghua.edu.cn/debian-multimedia/pool/main/d/deb-multimedia-keyring/deb-multimedia-keyring_2024.9.1_all.deb
 # dpkg -i deb-multimedia-keyring_2024.9.1_all.deb
 apt-get -y update -oAcquire::AllowInsecureRepositories=true
 #apt-get -y --allow-unauthenticated  install deb-multimedia-keyring
