@@ -255,6 +255,9 @@ pip3 install JACK-Client alsa-midi oyaml adafruit-circuitpython-neopixel-spi pyr
 sox meson ninja abletonparsing hwmon vcgencmd \
 tornado tornadostreamform websocket-client tornado_xstatic terminado xstatic XStatic_term.js
 
+# 为了处理install_pyliblo.sh问题，依赖Cython低版本
+pip3 install "Cython<3.0"
+
 #------------------------------------------------
 # System Adjustments
 #------------------------------------------------
