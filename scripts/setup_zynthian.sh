@@ -46,6 +46,11 @@ echo "deb https://mirrors.tuna.tsinghua.edu.cn/debian-security bookworm-security
 
 echo "deb https://mirrors.tuna.tsinghua.edu.cn/raspberrypi/ bookworm main" >> /etc/apt/sources.list.d/raspi.list
 
+# multimedia
+echo "deb https://mirrors.tuna.tsinghua.edu.cn/debian-multimedia/ bookworm main non-free" >> /etc/apt/sources.list
+wget https://mirrors.tuna.tsinghua.edu.cn/debian-multimedia/pool/main/d/deb-multimedia-keyring/deb-multimedia-keyring_2024.9.1_all.deb
+dpkg -i deb-multimedia-keyring_2024.9.1_all.deb
+
 # pip3换源
 mkdir -p ~/.pip
 cat > ~/.pip/pip.conf << EOF
