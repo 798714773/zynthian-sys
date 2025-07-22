@@ -16,3 +16,5 @@ make clean
 
 cd ..
 rm -rf "polluxsynth-audio-plugins"
+
+# 有错误

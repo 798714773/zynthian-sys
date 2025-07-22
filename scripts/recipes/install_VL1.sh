@@ -13,3 +13,5 @@ make install
 cd ..
 
 rm -rf "VL1-emulator"
+
+#有错误

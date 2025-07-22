@@ -10,6 +10,7 @@ fi
 git clone https://github.com/steveb/gula-plugins.git
 cd gula-plugins
 make all
+# cp -r lv2/* /zynthian/zynthian-plugins/lv2/
 cp -r lv2/* $ZYNTHIAN_PLUGINS_DIR/lv2/
 cd ..
 

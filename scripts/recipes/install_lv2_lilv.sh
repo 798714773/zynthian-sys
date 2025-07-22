@@ -32,6 +32,8 @@ git clone --recursive https://github.com/drobilla/zix.git
 cd zix
 meson setup build
 cd build
+# -mcpu=cortex-a72 -mtune=cortex-a72
+# meson configure -Dcpp_link_args="-mcpu=cortex-a72 -mtune=cortex-a72 -lstdc++fs"
 meson configure -Dcpp_link_args="$CXXFLAGS -lstdc++fs"
 meson compile
 meson install

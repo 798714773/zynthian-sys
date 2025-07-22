@@ -8,4 +8,6 @@ git clone --recursive https://github.com/devcurmudgeon/alo.git
 cd alo/source
 make -j 3 BASE_OPTS="-O3 -ffast-math -fdata-sections -ffunction-sections"
 make install
+
+# 这对吗
 rm -rf "alo"

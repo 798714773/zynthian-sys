@@ -13,6 +13,8 @@ make -j 4
 make install
 #make install-faust
 
+# 有错误
+
 wget https://raw.githubusercontent.com/e7mac/faust-code/master/granulator.dsp
 faust2lv2 granulator.dsp
 mv granulator.lv2 /zynthian/zynthian-plugins/lv2

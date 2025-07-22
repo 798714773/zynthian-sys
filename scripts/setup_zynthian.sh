@@ -64,7 +64,7 @@ echo `date` >  ~/.wiggled
 
 if [ ! -d "zynthian-sys" ]; then
 	apt-get update
-	apt-get -y install git screen cmake python3-alsaaudio
+	apt-get -y install git screen cmake python3-alsaaudio libqt6svg6-dev
 	git clone -b oram https://github.com/798714773/zynthian-sys.git
 fi
 cd zynthian-sys/scripts

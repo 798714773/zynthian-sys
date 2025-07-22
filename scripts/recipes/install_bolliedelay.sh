@@ -10,4 +10,5 @@ cd bolliedelay.lv2
 make
 make install
 
+#这对吗
 rm -rf "bolliedelay.lv2"

@@ -15,10 +15,11 @@ cd lvtk-1
 git checkout v1
 # Get a waf that works with little tweaks
 cp -a /zynthian/zynthian-sys/scripts/recipes/waf .
-./waf configure
+# 添加 `-Wno-deprecated-declarations` 来禁止显示弃用警告
+# ./waf configure
 sed -i "s/rU/r/g" .waf3-1.7.16-298c23e5260e502b06df5657cfb0eb26/waflib/Context.py
 sed -i "s/rU/r/g" .waf3-1.7.16-298c23e5260e502b06df5657cfb0eb26/waflib/ConfigSet.py
-./waf configure
+./waf configure -Wno-deprecated-declarations
 ./waf build
 ./waf install
 ./waf clean

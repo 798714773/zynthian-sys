@@ -76,11 +76,13 @@ apt-get -y install apt-transport-https rpi-update sudo software-properties-commo
 apt-get -y update -oAcquire::AllowInsecureRepositories=true
 #apt-get -y --allow-unauthenticated  install deb-multimedia-keyring
 
+# linuxsampler
 # KXStudio
 wget https://launchpad.net/~kxstudio-debian/+archive/kxstudio/+files/kxstudio-repos_11.2.0_all.deb
 sudo dpkg -i kxstudio-repos_11.2.0_all.deb
 rm -f kxstudio-repos_11.2.0_all.deb
 
+# 已经做了
 # Zynthian
 wget -O - https://deb.zynthian.org/deb-zynthian-org.gpg > /etc/apt/trusted.gpg.d/deb-zynthian-org.gpg
 echo "deb https://deb.zynthian.org/zynthian-oram bookworm-oram main" > "/etc/apt/sources.list.d/zynthian.list"
@@ -179,7 +181,8 @@ git clone -b "${ZYNTHIAN_SYS_BRANCH}" "${ZYNTHIAN_SYS_REPO}"
 #git config --global pull.rebase false
 
 # Install MCP4748 library (Analog Output / CV-OUT)
-$ZYNTHIAN_RECIPE_DIR/install_MCP4728.sh
+# 完成
+# $ZYNTHIAN_RECIPE_DIR/install_MCP4728.sh
 
 # Zyncoder library
 cd "$ZYNTHIAN_DIR"
@@ -192,9 +195,10 @@ git clone -b "${ZYNTHIAN_UI_BRANCH}" "${ZYNTHIAN_UI_REPO}"
 cd "$ZYNTHIAN_UI_DIR"
 find ./zynlibs -type f -name build.sh -exec {} \;
 
+# 完成
 # Zynthian Data
-cd "$ZYNTHIAN_DIR"
-git clone -b "${ZYNTHIAN_DATA_BRANCH}" "${ZYNTHIAN_DATA_REPO}"
+# cd "$ZYNTHIAN_DIR"
+# git clone -b "${ZYNTHIAN_DATA_BRANCH}" "${ZYNTHIAN_DATA_REPO}"
 
 # Zynthian Webconf Tool
 cd "$ZYNTHIAN_DIR"
@@ -240,6 +244,7 @@ cp -a $ZYNTHIAN_DATA_DIR/snapshots/* $ZYNTHIAN_MY_DATA_DIR/snapshots/000
 # Python Environment
 #------------------------------------------------
 
+# 已经做了
 cd "$ZYNTHIAN_DIR"
 python3 -m venv venv --system-site-packages
 source "$ZYNTHIAN_DIR/venv/bin/activate"
@@ -355,24 +360,30 @@ systemctl enable zynthian-config-on-boot
 #$ZYNTHIAN_RECIPE_DIR/install_bluez.sh
 
 # Install pyliblo library (liblo OSC library for Python)
-$ZYNTHIAN_RECIPE_DIR/install_pyliblo.sh
+# 完成
+# $ZYNTHIAN_RECIPE_DIR/install_pyliblo.sh
 
 # Install mod-ttymidi (MOD's ttymidi version with jackd MIDI support)
-$ZYNTHIAN_RECIPE_DIR/install_mod-ttymidi.sh
+# 完成
+# $ZYNTHIAN_RECIPE_DIR/install_mod-ttymidi.sh
 
 # Install LV2 lilv library
-$ZYNTHIAN_RECIPE_DIR/install_lv2_lilv.sh
+# 完成
+# $ZYNTHIAN_RECIPE_DIR/install_lv2_lilv.sh
 
 # Install the LV2 C++ Tool Kit
-$ZYNTHIAN_RECIPE_DIR/install_lvtk.sh
+# 完成
+# $ZYNTHIAN_RECIPE_DIR/install_lvtk.sh
 # => lvtk-1 failed
 # TODO FAILED=> ninja: build stopped: subcommand failed.
 
 # Install LV2 Jalv Plugin Host
-$ZYNTHIAN_RECIPE_DIR/install_lv2_jalv.sh
+# 完成
+# $ZYNTHIAN_RECIPE_DIR/install_lv2_jalv.sh
 
 # Install Aubio Library & Tools
-$ZYNTHIAN_RECIPE_DIR/install_aubio.sh
+# 完成
+# $ZYNTHIAN_RECIPE_DIR/install_aubio.sh
 
 # Install jpmidi (MID player for jack with transport sync)
 #$ZYNTHIAN_RECIPE_DIR/install_jpmidi.sh
@@ -380,57 +391,70 @@ $ZYNTHIAN_RECIPE_DIR/install_aubio.sh
 # Do we need this? => I think no!!
 
 # Install jack_capture (jackd audio recorder)
-$ZYNTHIAN_RECIPE_DIR/install_jack_capture.sh
+# 完成
+# $ZYNTHIAN_RECIPE_DIR/install_jack_capture.sh
 
 # Install jack_smf utils (jackd MID-file player/recorder)
-$ZYNTHIAN_RECIPE_DIR/install_jack-smf-utils.sh
+# 完成
+# $ZYNTHIAN_RECIPE_DIR/install_jack-smf-utils.sh
 
 # Install touchosc2midi (TouchOSC Bridge)
-$ZYNTHIAN_RECIPE_DIR/install_touchosc2midi.sh
+# 完成
+# $ZYNTHIAN_RECIPE_DIR/install_touchosc2midi.sh
 
 # Install jackclient (jack-client python library)
 #$ZYNTHIAN_RECIPE_DIR/install_jackclient-python.sh
 
 # Install QMidiNet (MIDI over IP Multicast)
-$ZYNTHIAN_RECIPE_DIR/install_qmidinet.sh
+# 完成 依赖sudo apt install libqt6svg6-dev
+# $ZYNTHIAN_RECIPE_DIR/install_qmidinet.sh
 
 # Install jackrtpmidid (jack RTP-MIDI daemon)
-$ZYNTHIAN_RECIPE_DIR/install_jackrtpmidid.sh
+# 完成
+# $ZYNTHIAN_RECIPE_DIR/install_jackrtpmidid.sh
 
 # Install the DX7 SysEx parser
-$ZYNTHIAN_RECIPE_DIR/install_dxsyx.sh
+# 完成
+# $ZYNTHIAN_RECIPE_DIR/install_dxsyx.sh
 
 # Install preset2lv2 (Convert native presets to LV2)
-$ZYNTHIAN_RECIPE_DIR/install_preset2lv2.sh
+# 完成
+# $ZYNTHIAN_RECIPE_DIR/install_preset2lv2.sh
 
 # Install QJackCtl
 #$ZYNTHIAN_RECIPE_DIR/install_qjackctl.sh
 
 # Install patchage
-$ZYNTHIAN_RECIPE_DIR/install_patchage.sh
+# 完成
+# $ZYNTHIAN_RECIPE_DIR/install_patchage.sh
 
 # Install the njconnect Jack Graph Manager
-$ZYNTHIAN_RECIPE_DIR/install_njconnect.sh
+# 完成
+# $ZYNTHIAN_RECIPE_DIR/install_njconnect.sh
 
 # Install Mutagen (when available, use pip3 install)
 # $ZYNTHIAN_RECIPE_DIR/install_mutagen.sh
 
 # Install VL53L0X library (Distance Sensor)
-$ZYNTHIAN_RECIPE_DIR/install_VL53L0X.sh
+# 完成
+# $ZYNTHIAN_RECIPE_DIR/install_VL53L0X.sh
 
 
 
 # Install noVNC web viewer
-$ZYNTHIAN_RECIPE_DIR/install_noVNC.sh
+# 完成
+# $ZYNTHIAN_RECIPE_DIR/install_noVNC.sh
 
 # Install terminal emulator for tornado (webconf)
 #$ZYNTHIAN_RECIPE_DIR/install_terminado.sh
 
 # Install DT overlays for waveshare displays and others
-$ZYNTHIAN_RECIPE_DIR/install_waveshare-dtoverlays.sh
+# 完成
+# $ZYNTHIAN_RECIPE_DIR/install_waveshare-dtoverlays.sh
 
 # Install web filebrowser
-$ZYNTHIAN_RECIPE_DIR/install_filebrowser.sh
+# 完成
+# $ZYNTHIAN_RECIPE_DIR/install_filebrowser.sh
 
 #------------------------------------------------
 # Build & Install Synthesis Software
@@ -450,18 +474,22 @@ apt-get -y install fluidsynth libfluidsynth-dev fluid-soundfont-gm fluid-soundfo
 # Stop & disable systemd fluidsynth service
 systemctl stop --user fluidsynth.service
 systemctl mask --user fluidsynth.service
+
+# 完成
 # Create SF2 soft links
-ln -s /usr/share/sounds/sf2/*.sf2 $ZYNTHIAN_DATA_DIR/soundfonts/sf2
+# ln -s /usr/share/sounds/sf2/*.sf2 $ZYNTHIAN_DATA_DIR/soundfonts/sf2
 
 # Install Squishbox SF2 soundfonts
-$ZYNTHIAN_RECIPE_DIR/install_squishbox_sf2.sh
+# 完成
+# $ZYNTHIAN_RECIPE_DIR/install_squishbox_sf2.sh
 
 # Install Polyphone (SF2 editor)
 #$ZYNTHIAN_RECIPE_DIR/install_polyphone.sh
 
 # Install Sfizz (SFZ player)
 #apt-get -y install sfizz  # repo version segfaults!!!
-$ZYNTHIAN_RECIPE_DIR/install_sfizz.sh
+# 完成
+# $ZYNTHIAN_RECIPE_DIR/install_sfizz.sh
 
 # Install Linuxsampler
 #$ZYNTHIAN_RECIPE_DIR/install_linuxsampler_stable.sh
@@ -471,7 +499,8 @@ apt-get -y install linuxsampler gigtools
 #$ZYNTHIAN_RECIPE_DIR/install_fantasia.sh
 
 # Install setBfree (Hammond B3 Emulator)
-$ZYNTHIAN_RECIPE_DIR/install_setbfree.sh
+# 完成
+# $ZYNTHIAN_RECIPE_DIR/install_setbfree.sh
 # Setup user config directories
 cd $ZYNTHIAN_CONFIG_DIR
 mkdir setbfree
@@ -480,7 +509,8 @@ cp -a $ZYNTHIAN_DATA_DIR/setbfree/cfg/zynthian_my.cfg ./setbfree/zynthian.cfg
 
 # Install Aeolus (Pipe Organ Emulator)
 #apt-get -y install aeolus
-$ZYNTHIAN_RECIPE_DIR/install_aeolus.sh
+# 完成
+# $ZYNTHIAN_RECIPE_DIR/install_aeolus.sh
 
 # Install Pianoteq Demo (Piano Physical Emulation)
 $ZYNTHIAN_RECIPE_DIR/install_pianoteq_demo.sh

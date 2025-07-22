@@ -12,4 +12,5 @@ make
 make install
 mv ~/.lv2/talentedhack.lv2 /usr/local/lib/lv2
 
+# 这对吗
 rm -rf "TalentedHack"

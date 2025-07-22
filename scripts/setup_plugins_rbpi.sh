@@ -60,7 +60,8 @@ wolf-shaper wolf-spectrum wolpertinger-lv2 zam-plugins zlfo
 #------------------------------------------------
 
 #$ZYNTHIAN_RECIPE_DIR/install_fluidsynth.sh
-$ZYNTHIAN_RECIPE_DIR/install_fluidplug.sh
+# 完成
+# $ZYNTHIAN_RECIPE_DIR/install_fluidplug.sh
 #$ZYNTHIAN_RECIPE_DIR/install_mod-setbfree.sh
 #$ZYNTHIAN_RECIPE_DIR/install_zynaddsubfx.sh
 #$ZYNTHIAN_RECIPE_DIR/install_linuxsampler.sh
@@ -71,11 +72,16 @@ $ZYNTHIAN_RECIPE_DIR/install_fluidplug.sh
 #$ZYNTHIAN_RECIPE_DIR/install_ams-lv2.sh
 #$ZYNTHIAN_RECIPE_DIR/install_amsynth.sh
 #$ZYNTHIAN_RECIPE_DIR/install_sooperlooper-lv2-plugin.sh
-$ZYNTHIAN_RECIPE_DIR/install_sosynth.sh
-$ZYNTHIAN_RECIPE_DIR/install_guitarix.sh
-$ZYNTHIAN_RECIPE_DIR/install_gxswitchlesswah.sh
-$ZYNTHIAN_RECIPE_DIR/install_gxdenoiser2.sh
-$ZYNTHIAN_RECIPE_DIR/install_gxdistortionplus.sh
+# 完成
+# $ZYNTHIAN_RECIPE_DIR/install_sosynth.sh
+# 完成
+# $ZYNTHIAN_RECIPE_DIR/install_guitarix.sh
+# 完成
+# $ZYNTHIAN_RECIPE_DIR/install_gxswitchlesswah.sh
+# 完成
+# $ZYNTHIAN_RECIPE_DIR/install_gxdenoiser2.sh
+# 完成
+# $ZYNTHIAN_RECIPE_DIR/install_gxdistortionplus.sh
 #$ZYNTHIAN_RECIPE_DIR/install_gxplugins.sh
 #$ZYNTHIAN_RECIPE_DIR/install_gxsupersaturator.sh
 #$ZYNTHIAN_RECIPE_DIR/install_helm.sh
@@ -100,44 +106,69 @@ $ZYNTHIAN_RECIPE_DIR/install_mod-mda.sh
 $ZYNTHIAN_RECIPE_DIR/install_setBfree-controller.sh
 $ZYNTHIAN_RECIPE_DIR/install_string-machine.sh
 $ZYNTHIAN_RECIPE_DIR/install_midi_display.sh
-$ZYNTHIAN_RECIPE_DIR/install_punk_console.sh
+# 完成
+# $ZYNTHIAN_RECIPE_DIR/install_punk_console.sh
 $ZYNTHIAN_RECIPE_DIR/install_reMID.sh
-$ZYNTHIAN_RECIPE_DIR/install_miniopl3.sh
-$ZYNTHIAN_RECIPE_DIR/install_ykchorus.sh
-$ZYNTHIAN_RECIPE_DIR/install_gula.sh
+# 完成
+# $ZYNTHIAN_RECIPE_DIR/install_miniopl3.sh
+# 完成
+# $ZYNTHIAN_RECIPE_DIR/install_ykchorus.sh
+# 完成
+# $ZYNTHIAN_RECIPE_DIR/install_gula.sh
 #$ZYNTHIAN_RECIPE_DIR/install_arpeggiator.sh
 $ZYNTHIAN_RECIPE_DIR/install_mod-arpeggiator.sh
-$ZYNTHIAN_RECIPE_DIR/install_stereo-mixer.sh
-$ZYNTHIAN_RECIPE_DIR/install_alo.sh
-$ZYNTHIAN_RECIPE_DIR/install_VL1.sh
+# 完成
+# $ZYNTHIAN_RECIPE_DIR/install_stereo-mixer.sh
+# 完成
+# $ZYNTHIAN_RECIPE_DIR/install_alo.sh
+# 完成
+# $ZYNTHIAN_RECIPE_DIR/install_VL1.sh
 $ZYNTHIAN_RECIPE_DIR/install_mod-cabsim-IR-loader.sh
-$ZYNTHIAN_RECIPE_DIR/install_bolliedelay.sh
-$ZYNTHIAN_RECIPE_DIR/install_talentedhack.sh
-$ZYNTHIAN_RECIPE_DIR/install_mimi.sh
-$ZYNTHIAN_RECIPE_DIR/install_avldrums.sh
+# 完成
+# $ZYNTHIAN_RECIPE_DIR/install_bolliedelay.sh
+# 完成
+# $ZYNTHIAN_RECIPE_DIR/install_talentedhack.sh
+# 完成 这对吗
+# $ZYNTHIAN_RECIPE_DIR/install_mimid.sh
+# $ZYNTHIAN_RECIPE_DIR/install_mimi.sh
+# 完成
+# $ZYNTHIAN_RECIPE_DIR/install_avldrums.sh
 
 # Faust LV2 plugins =>
 # Fallan algunos al construir, pero el Granulator funciona!!
-$ZYNTHIAN_RECIPE_DIR/install_faust_lv2.sh
+# 完成
+# $ZYNTHIAN_RECIPE_DIR/install_faust_lv2.sh
 
 # X42 plugins
 $ZYNTHIAN_RECIPE_DIR/install_x42_plugins.sh
 
 # Zynthian pre-compiled plugins
-$ZYNTHIAN_RECIPE_DIR/install_dexed_prebuilt.sh
-$ZYNTHIAN_RECIPE_DIR/install_monique_monosynth_prebuilt.sh
-$ZYNTHIAN_RECIPE_DIR/install_odin2_prebuilt.sh
-$ZYNTHIAN_RECIPE_DIR/install_argotlunar2_prebuilt.sh
-$ZYNTHIAN_RECIPE_DIR/install_qmidiarp_prebuilt.sh
-$ZYNTHIAN_RECIPE_DIR/install_dsp56300_prebuilt.sh
-$ZYNTHIAN_RECIPE_DIR/install_nam_prebuilt.sh
-$ZYNTHIAN_RECIPE_DIR/install_ratatouille_prebuilt.sh
-$ZYNTHIAN_RECIPE_DIR/install_ripplerx_prebuilt.sh
-$ZYNTHIAN_RECIPE_DIR/install_TAL-U-NO-LX-V2_prebuilt.sh
-$ZYNTHIAN_RECIPE_DIR/install_surge_xt_prebuilt.sh
+# 完成
+# $ZYNTHIAN_RECIPE_DIR/install_dexed_prebuilt.sh
+# 完成
+# $ZYNTHIAN_RECIPE_DIR/install_monique_monosynth_prebuilt.sh
+# 完成
+# $ZYNTHIAN_RECIPE_DIR/install_odin2_prebuilt.sh
+# 完成
+# $ZYNTHIAN_RECIPE_DIR/install_argotlunar2_prebuilt.sh
+# 完成
+# $ZYNTHIAN_RECIPE_DIR/install_qmidiarp_prebuilt.sh
+# 完成
+# $ZYNTHIAN_RECIPE_DIR/install_dsp56300_prebuilt.sh
+# 完成
+# $ZYNTHIAN_RECIPE_DIR/install_nam_prebuilt.sh
+# 完成
+# $ZYNTHIAN_RECIPE_DIR/install_ratatouille_prebuilt.sh
+# 完成
+# $ZYNTHIAN_RECIPE_DIR/install_ripplerx_prebuilt.sh
+# 完成
+# $ZYNTHIAN_RECIPE_DIR/install_TAL-U-NO-LX-V2_prebuilt.sh
+# 完成
+# $ZYNTHIAN_RECIPE_DIR/install_surge_xt_prebuilt.sh
 mkdir "/root/.Surge XT"
 
 # Fixup amsynth bank/presets
+# 这有吗
 $ZYNTHIAN_RECIPE_DIR/fixup_amsynth.sh
 
 # Install MOD-UI skins

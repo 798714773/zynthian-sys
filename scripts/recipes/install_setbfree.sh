@@ -10,6 +10,9 @@ cd setBfree
 ./localize_rtk.sh
 mkdir lv2
 
+# -mcpu=cortex-a72 -mtune=cortex-a72
+# -funsafe-loop-optimizations -funsafe-math-optimizations -ffast-math
+# sed -i -- "s/-msse -msse2 -mfpmath=sse/-mcpu=cortex-a72 -mtune=cortex-a72 -funsafe-loop-optimizations -funsafe-math-optimizations -ffast-math/g" common.mak
 sed -i -- "s/-msse -msse2 -mfpmath=sse/$CFLAGS $CFLAGS_UNSAFE/g" common.mak
 sed -i -- "s|^lv2dir = \$(PREFIX)/lib/lv2|lv2dir = $ZYNTHIAN_SW_DIR/setBfree/lv2|" common.mak
 

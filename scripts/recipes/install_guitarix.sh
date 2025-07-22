@@ -14,6 +14,7 @@ fi
 
 git clone https://github.com/brummer10/guitarix.git
 cd guitarix/trunk
+# ./waf configure --no-standalone --no-lv2-gui --disable-sse --lv2dir=/zynthian/zynthian-plugins/lv2 --no-avahi --no-bluez --no-faust --mod-lv2
 ./waf configure --no-standalone --no-lv2-gui --disable-sse --lv2dir=$ZYNTHIAN_PLUGINS_DIR/lv2 --no-avahi --no-bluez --no-faust --mod-lv2
 ./waf build -j 3
 ./waf install
